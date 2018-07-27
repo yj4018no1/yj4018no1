@@ -1,0 +1,6 @@
+{
+  "name": "Authority",
+  "version": "1.0.1",
+  "private": true,
+  "main": "./Authority.jsx"
+}

@@ -1,0 +1,36 @@
+{
+  "extends": "airbnb",
+  "installedESLint": true,
+  "plugins": [
+    "babel",
+    "react",
+    "import"
+  ],
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "globals": {
+    "__DEV__": false,
+    "__PROD__": false
+  },
+  "settings": {
+    "ecmascript": 6,
+    "jsx": true
+  },
+  "rules": {
+    "import/no-extraneous-dependencies": 0, // 关闭显示 react 不在依赖的问题
+    "import/no-unresolved": 0, // 关闭找不到模块
+    "import/extensions": 0, // 关闭文件扩展,
+    "import/no-dynamic-require": 1, // require 动态导入
+    "react/no-string-refs": 0, // 关闭 refs
+    "react/forbid-prop-types": 0, // 关闭类型检查
+    "no-param-reassign": 1, // 对于修改形参只警告
+    "no-class-assign": 0, // 关闭对类的重新赋值, ant 的写法 不太明白
+    "global-require": 0, // 关闭全局 require 错误
+    "no-underscore-dangle": 0,
+    "react/require-default-props": 0,
+    "react/no-children-prop": 1
+  }
+}

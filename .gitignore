@@ -1,0 +1,9 @@
+.DS_STORE
+*.log
+*.iml
+.idea/
+node_modules/
+dist/
+
+.vscode
+.happypack

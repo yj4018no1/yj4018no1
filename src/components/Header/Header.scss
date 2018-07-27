@@ -1,0 +1,12 @@
+.gastly-issuse {
+  text-align: right;
+  >a {
+    line-height: 64px;
+    &:first-child {
+      margin-right: 5px;
+    }
+    &:last-child {
+      margin-left: 5px;
+    }
+  }
+}
