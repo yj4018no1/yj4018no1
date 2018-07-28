@@ -1,14 +1,27 @@
-# BVS 数据管理平台
+#
 
 ## 使用方法
-
+先安装好 node 环境 python 环境
 ```
 1. 安装依赖
-npm install
+-- 1.1 npm 安装 国外镜像较慢 可采用下面对的taobao镜像安装
+    npm install
+-- 1.2 
+    # a 注册模块镜像
+    npm set registry https://registry.npm.taobao.org
+    # b node-gyp 编译依赖的 node 源码镜像
+    npm set disturl https://npm.taobao.org/dist
+    # c 清空缓存
+    npm cache clean --force
+    # d 安装 cnpm
+    npm install -g cnpm --registry=https://registry.npm.taobao.org
+    # e 安装依赖包
+    cnpm install
+
 2. 开发模式
-npm run dev
+    npm run dev
 3. 生产模式
-npm run prod
+    npm run prod
 ```
 
 ## 项目目录结构
@@ -38,7 +51,7 @@ src  项目主文件
 
    形如： http: // 127.0.0.1:8090
 
-3. 再启动前端项目,在前端项目目录下执行： npm install
+3. 在启动前端项目,在前端项目目录下执行： npm install
 
 4. 成功后执行npm run dev ,启动成功后会在浏览器中打开一个新的页面
 

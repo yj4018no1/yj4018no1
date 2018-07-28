@@ -159,7 +159,7 @@ if (__DEV__) {
   webpackConfig.plugins.push(
     new Webpack.HotModuleReplacementPlugin(),
     new Webpack.NoErrorsPlugin(),
-    new OpenBrowserWebpackPlugin({ url: 'http://localhost:3000/' }),
+    new OpenBrowserWebpackPlugin({ url: `http://localhost:${config.server_port}/`, browser: "chrome" }),
   );
 } else {
   debug('🐲 启用生产模式插件 (OccurenceOrder, Dedupe & UglifyJS).');

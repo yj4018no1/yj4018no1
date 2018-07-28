@@ -24,7 +24,7 @@ const config = {
   path_node_modules: 'node_modules',
   // 服务端配置
   server_host: LOCAL_IP,
-  server_port: process.env.PORT || 3000,
+  server_port: process.env.PORT || 3010,
   // 第三方包: 手动添加
   vendor: [
     'babel-polyfill',
@@ -54,8 +54,8 @@ const CompilerConfig = {
     proxy: {
       enabled: true,
       options: {
-        host: 'http://local.haier.net:9007/',
-        //host:'http://tdp.qdct-lsb.haier.net/' ,
+        // host: 'http://local.haier.net:9007/',
+        host: 'http://tdp.qdct-lsb.haier.net/',
         match: /^\/api\/.*/,
       },
     },
