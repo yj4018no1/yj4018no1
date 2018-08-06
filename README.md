@@ -1,4 +1,4 @@
-#
+# platform
 
 ## 使用方法
 先安装好 node 环境 python 环境
