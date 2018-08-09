@@ -55,7 +55,7 @@ const CompilerConfig = {
       enabled: true,
       options: {
         // host: 'http://local.haier.net:9007/',
-        host: 'http://tdp.qdct-lsb.haier.net/',
+        host: 'http://localhost:9999/',
         match: /^\/api\/.*/,
       },
     },

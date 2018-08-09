@@ -3,7 +3,9 @@
 *.iml
 .idea/
 node_modules/
+typings/*
 dist/
+typings.json
 
 .vscode
 .happypack

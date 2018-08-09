@@ -1,4 +1,6 @@
-const API = [{
+import { API as myapi } from "./myapi";
+
+let API = [{
   URL: '/api/user/:id(\\d+)', // 请注意如果要指明 id 为数字请添加(\\d+)
   GET: {
     'success|1': [true, false],
@@ -51,5 +53,8 @@ const API = [{
     error: '',
   },
 }];
+
+// console.log(myapi);
+API = API.concat(myapi);
 
 export default API;

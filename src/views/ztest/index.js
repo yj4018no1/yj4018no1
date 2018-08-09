@@ -1,7 +1,7 @@
 import { injectReducer } from 'store/reducers';
 
 export default store => ({
-  path: 'ztest/index',
+  path: 'ztest',
   breadcrumbName: '测试',
   // 当路由匹配时,异步获取组件
   getComponent(nextState, cb) {

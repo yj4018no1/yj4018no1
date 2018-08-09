@@ -1,7 +1,7 @@
 {
-  "name": "bvs",
+  "name": "react-platform",
   "version": "1.0.0",
-  "description": "bvs 数据管理",
+  "description": "react-platform",
   "main": "index.js",
   "scripts": {
     "clean": "rimraf dist",
