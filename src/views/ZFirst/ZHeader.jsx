@@ -22,7 +22,7 @@ export const ZHeader = (props) => {
                         <div className="txt-info" id="ECS_MEMBERZONE">
 
                             <span>您好 &nbsp;<a >89713722-832183</a></span>
-                            <span>，欢迎来到&nbsp;<a alt="首页" title="首页" >{ props.sitename }</a></span>
+                            <span>，欢迎来到&nbsp;<a alt="首页" title="首页" >{ props.headerData.sitename }</a></span>
                             <span>[<a onClick = {props.handleFunc.bind(this,"hello")}>退出</a>]</span>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { Form, Input, Table, Row, Col, Button, Card, Select, Icon, Modal, Transfer, notification } from 'antd';
-import { handleQueryData } from './containers';
+import * as containers from './containers';
 
 // static styles
 import "styles/css/base.css";
@@ -13,6 +13,7 @@ import "styles/css/color.css";
 
 import { ZHeader } from "./ZHeader";
 import { ZNav } from "./ZNav";
+import { ZHomeIndex } from "./ZHomeIndex";
 
 //创建的实体类
 class ZFirst extends Component {
@@ -22,8 +23,8 @@ class ZFirst extends Component {
 
     componentWillMount() {
         console.log("ZFirst.componentWillMount");
-        let _t = this.props.handleQueryData();
-        console.log(_t);
+        this.props.handleQueryData();
+        this.props.handleQueryDataNav();
     }
 
     handleFunc(m) {
@@ -33,13 +34,21 @@ class ZFirst extends Component {
     render() {
         console.log("ZFirst.render", this.props);
         const headerProps = {
-            ...this.props.zfirstreducer.headerData,
-            handleFunc: this.handleFunc
+            headerData: this.props.zfirstreducer.headerData,
+            handleFunc: this.handleFunc,
+            
         }
+        const navProps = {
+            nav: this.props.zfirstreducer.nav,
+            onMouseNav: this.props.onMouseNav,
+            // onMouseNav: containers.onMouseNav.bind(this),
+        }
+        console.log("navProps", navProps);
         return (
             <div className="home_visual_body festival_home" style={{ height: 100 + '%' }}>
                 <ZHeader {...headerProps} />
-                <ZNav />
+                { navProps.nav ? <ZNav { ...navProps } /> : null }
+                <ZHomeIndex {...headerProps} />
 
             </div>
         );
@@ -51,7 +60,9 @@ ZFirst.propTypes = {
 
 
 const mapDispatchToProps = {
-    handleQueryData: (param) => handleQueryData(param),
+    handleQueryData: (param) => containers.handleQueryData(param),
+    handleQueryDataNav: (param) => containers.handleQueryDataNav(param),
+    onMouseNav: (nav, id, selected) => containers.onMouseNav(nav, id, selected),
 };
 
 const mapStateTopProps = state => ({

@@ -34,15 +34,16 @@ export const createRoutes = store => ({
       path: '/',
       component: ZLayout,
       breadcrumbName: '首页',
-      // onEnter: (nextState, replace, next) => {
-      //   const url = window.location.search && window.location.search.split('=')[1];
-      //   if (!requireAuth()) {
-      //     replace({ pathname: '/login', query: { url } });
-      //   } else if (url) {
-      //     replace({ pathname: `/${url}` });
-      //   }
-      //   next();
-      // },
+      onEnter: (nextState, replace, next) => {
+        const url = window.location.search && window.location.search.split('=')[1];
+        // if (!requireAuth()) {
+        //   replace({ pathname: '/login', query: { url } });
+        // } else if (url) {
+        //   replace({ pathname: `/${url}` });
+        // }
+
+        next();
+      },
       childRoutes: [
         ztest(store),
         ZFirst(store),

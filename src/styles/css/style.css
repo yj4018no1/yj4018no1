@@ -12,6 +12,14 @@ Template Type: type_0
 Date:2017-02-06 11:22:00
 */
 
+.content .content-index01{
+    min-height: 949px; 
+    background-position: center center; 
+    background-repeat: no-repeat; 
+    background-color: transparent; 
+    background-image: none;
+}
+
 /* home start*/
 /*首页悬浮搜索栏*/
 .attached-search-container {
@@ -270,7 +278,7 @@ Date:2017-02-06 11:22:00
 .vip-item .tit {
     background-color: #eee;
     height: 24px;
-    line-height: 24px;
+    line-height: 0px;
     font-weight: bold;
     color: #555;
     padding-left: 18px;
@@ -22746,11 +22754,11 @@ div.pay_more a, div.pay_more input {
 .festival_home .vip-outcon .vip-item .tit {
     background: none;
     font-size: 14px;
-    padding: 10px 0 10px 20px;
+    padding: 10px 5px 10px 20px;
 }
 
 .festival_home .vip-outcon .vip-item .con {
-    margin: 0 20px 6px;
+    margin: 20px 5px 20px 20px;
 }
 
 .festival_home .vip-outcon .vip-item .con li {
@@ -22760,6 +22768,7 @@ div.pay_more a, div.pay_more input {
 .festival_home .vip-outcon .vip-item .kj_con {
     padding: 0;
     border-top: 1px solid #eee;
+    
 }
 
 .festival_home .vip-outcon .vip-item .kj_con .item {
