@@ -23,9 +23,9 @@ class ZLayout extends React.Component {
         )
     };
 
-    componentDidMount(){
-        browserHistory.push("/ZFirst");
-    }
+    // componentDidMount(){
+    //     browserHistory.push("/ZFirst");
+    // }
 }
 
 

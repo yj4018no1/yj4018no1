@@ -10,6 +10,7 @@ import "styles/css/iconfont.css";
 import "styles/css/purebox.css";
 import "styles/css/quickLinks.css";
 import "styles/css/color.css";
+import "./ZFirst.scss"
 
 import { ZHeader } from "./ZHeader";
 import { ZNav } from "./ZNav";

@@ -1,5 +1,6 @@
 import React from 'react';
 import imgavatar from "styles/images/avatar.png";
+import { Carousel } from "antd"
 
 export const ZHome0 = (props) => {
     return (<div className="visual-item" data-mode="lunbo" data-purebox="adv" data-li="1" data-length="5"
@@ -9,7 +10,7 @@ export const ZHome0 = (props) => {
             <div className="banner-wrapper">
 
                 <div className="banner home-banner">
-                    <div className="bd">
+                    {/* <div className="bd">
                         <ul data-type="range" data-slide="fold">
                             <li style={{ "backgroundImage": "url(https://test.dscmall.cn/data/gallery_album/61/original_img/1516668314344982350.jpg)", "backgroundPosition": "center center", "backgroundRepeat": "no-repeat", "backgroundColor": null }}>
                                 <div className="banner-width"><a href="http://www.dscmall.cn" target="_blank"
@@ -28,10 +29,18 @@ export const ZHome0 = (props) => {
 
                         </ul>
                         <div className="spec" data-spec=""></div>
+
+                        
                     </div>
                     <div className="hd">
                         <ul></ul>
-                    </div>
+                    </div> */}
+
+                    <Carousel autoplay="true" effect="fade">
+                        <div style={{ "backgroundImage": "url(https://test.dscmall.cn/data/gallery_album/61/original_img/1516668314344982350.jpg)", "backgroundPosition": "left", "backgroundRepeat": "no-repeat", "backgroundColor": null, "width":"100%" }}><h3 style={{ "height": 500 + "px" }}></h3></div>
+                        <div style={{ "backgroundImage": "url(https://test.dscmall.cn/data/gallery_album/61/original_img/1516668314496790457.jpg)", "backgroundPosition": "left", "backgroundRepeat": "no-repeat", "backgroundColor": null, "width":"100%" }}><h3 style={{ "height": 500 + "px" }}></h3></div>
+                        <div style={{ "backgroundImage": "url(https://test.dscmall.cn/data/gallery_album/61/original_img/1516730167912917360.jpg)", "backgroundPosition": "left", "backgroundRepeat": "no-repeat", "backgroundColor": null, "width":"100%" }}><h3 style={{ "height": 500 + "px" }}></h3></div>
+                    </Carousel>
                 </div>
                 <div className="vip-outcon">
                     <div className="vip-con">

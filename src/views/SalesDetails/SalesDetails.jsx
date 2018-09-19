@@ -100,6 +100,7 @@ const content = (
     </div>
   </div>
 );
+
 const columns = [
   {
     title: '分中心',

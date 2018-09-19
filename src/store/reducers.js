@@ -2,14 +2,16 @@ import {
   combineReducers,
 } from 'redux';
 import locationReducer from './location';
-import tagsReducer from './tags';
-import homeReducer from './home';
+// import tagsReducer from './tags';
+// import homeReducer from './home';
+import zfirstReducer from 'views/ZFirst/containers';
 
 export const makeRooterReducer = asyncReducers =>
   combineReducers({
     location: locationReducer,
-    tags: tagsReducer,
-    home: homeReducer,
+    // tags: tagsReducer,
+    // home: homeReducer,
+    zfirstreducer: zfirstReducer,
     ...asyncReducers,
   });
 

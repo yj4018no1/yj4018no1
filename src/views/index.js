@@ -34,8 +34,14 @@ export const createRoutes = store => ({
       path: '/',
       component: ZLayout,
       breadcrumbName: '首页',
+      indexRoute: ZFirst, 
       onEnter: (nextState, replace, next) => {
+        console.log(window);
         const url = window.location.search && window.location.search.split('=')[1];
+        console.log(url);
+        if(url){
+          replace({ pathname: `/${url}` });
+        }
         // if (!requireAuth()) {
         //   replace({ pathname: '/login', query: { url } });
         // } else if (url) {
@@ -46,7 +52,7 @@ export const createRoutes = store => ({
       },
       childRoutes: [
         ztest(store),
-        ZFirst(store),
+        // ZFirst(store),
       ],
     },
     //   {
